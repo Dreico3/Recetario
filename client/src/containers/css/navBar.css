@@ -1,0 +1,9 @@
+.caja{
+    display: flexbox;
+    height: 110px;
+    margin: 0;
+    border:solid 1px;
+    border-radius: 5px;
+    background:rgb(29, 23, 17);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
