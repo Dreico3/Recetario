@@ -1,0 +1,22 @@
+.active {
+    text-decoration: none;
+    font-size: 35px;
+    padding: 5px 5px;
+    -webkit-text-stroke: 0.9px black;
+    font-weight: bolder;
+    color: #faf6f4;
+    
+}
+
+.desactive {
+    font-size: 30px;
+    -webkit-text-stroke: 0.5px black;
+    color: #9b9b94;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.mid{
+    height: 5px;
+    text-align: center;
+    background-color: #362725;
+}

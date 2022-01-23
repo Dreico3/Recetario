@@ -1,0 +1,57 @@
+.containe{
+    display: inline-table;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: cornflowerblue;
+    padding: 0 20px;
+}
+.card-containe{
+    display: flexbox;
+    width: 600px;
+    height: auto;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0,0,0,.2);
+}
+.heade{
+    border-right: 1px solid #ddd;
+}
+
+.descriptio{
+    background: #fbfbfb;
+    position: relative;
+}
+
+.heade, .descriptio{
+    padding: 20px;
+    text-align: center;
+}
+.heade a{
+    position: relative;
+    display: block;
+}
+.heade img{
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0,0,0,.06);
+    margin:20px 30px;
+    transition: .2s;
+}
+.heade a:hover img{
+    box-shadow: 0 0 0 12px rgba(0,0,0,.1);
+
+}
+.heade h1{
+    color: #f0522a;
+}
+.descriptio p{
+ margin: 20px 30px;
+}
+.descriptio .diet{
+    margin-top: 25px;
+}
+.descriptio .diet a{
+    display: inline-block;
+    padding: 0 15px;
+    color:#f0522a;
+}
