@@ -1,17 +1,25 @@
-import './App.css';
-import { useDispatch, useSelector } from "react-redux";
+
+import { useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 import {Optener} from './store/actions';
+
+import {Route,Routes} from 'react-router-dom'
+import Home from './containers/Home'
+import NavBar from './containers/NavBar'
+import Recipes from './containers/Recipes'
 function App() {
+  
   const dispatch=useDispatch();
-  const recetas = useSelector(state=>state.recipes);
   useEffect(()=>{
     dispatch(Optener())
   },[])
   return (
-    <div className="App">
-      {console.log(recetas)}
-      <h1>hola esto es la Aplicacion de recetas</h1>
+    <div>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/recipes" element={<Recipes/>}/>
+      </Routes>
     </div>
   );
 }

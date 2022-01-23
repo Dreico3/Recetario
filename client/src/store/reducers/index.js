@@ -1,6 +1,6 @@
 const initialState = {
     //esto se armara mas tarde que temprano :D
-    recipes:'Esto es el estado'
+    recipes:[]
 }
 
 const rootReducer = (state = initialState, action) => {
