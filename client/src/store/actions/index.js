@@ -1,15 +1,35 @@
-import axios from 'axios';
-
+import { getDiets,getRecipes,getRecipesName } from '../../services';
 export function Optener() {
-    return async (dispatch)=>{
+    return async (dispatch) => {
 
-        console.log('gola torola');
-        const recetas = await axios.get('http://localhost:3001/recipes');
-
-        //en construccions
+        const recetas = await getRecipes();
+        const dietas = await getDiets();
         return dispatch({
-            type:'INITIAL',
-            payload:recetas.data
+            type: 'INITIAL',
+            payload: recetas.data,
+            payload2: dietas.data
+        })
+    }
+}
+
+export function Buscar(nombre) {
+    return async (dispatch) => {
+        const recetas = await getRecipesName(nombre);
+
+        return dispatch({
+            type: 'SEARCH',
+            payload: recetas.data
+        })
+    }
+}
+
+export function Diets() {
+    return async (dispatch) => {
+        const dietas = await getDiets();
+
+        return dispatch({
+            type: 'DIET',
+            payload: dietas.data
         })
     }
 }

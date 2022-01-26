@@ -13,8 +13,7 @@ export default function Home() {
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
-
-    console.log(offset);
+ 
     return (
         <div>
             <section className="hero">
@@ -28,9 +27,16 @@ export default function Home() {
             <section className="content">
                 {offset > 100 ?
                     <div className="content-body" style={{ bottom: offset / 2 + "px" }}>
-                        <h1>esto es home perras</h1>
+                        <h1>Chefsito</h1>
+<br/>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aspernatur mollitia exercitationem voluptatibus tempora eos accusantium, delectus laudantium, magni suscipit similique porro cupiditate quas voluptatem non aperiam fugit ex hic.
+                        El trabajo del crítico es sencillo en más de un sentido. Arriesgamos muy poco, y sin embargo usufructuamos de una posición situada por encima de quienes someten su trabajo y su persona a nuestro juicio. Prosperamos gracias a nuestras críticas negativas, que resultan divertidas cuando se las escribe y cuando se las lee.
+Pero la cruda verdad que los críticos debemos enfrentar es que, en términos generales, la producción de basura promedio es más valiosa que lo que nuestros artículos pretenden señalar. Sin embargo, a veces el crítico realmente arriesga algo, y eso sucede en nombre y en defensa de algo nuevo.</p>
+<br/>
+<p>Anoche experimenté algo nuevo, una comida extraordinaria hecha por alguien único e inesperado. Decir que ese plato y su cocinero pusieron a prueba mis preconceptos equivaldría a incurrir en una subestimación grosera, cuando lo cierto es que ambos lograron conmover lo más profundo de mi ser.</p>
+<br/>
+<p>Antes de este suceso, nunca escondí mi desdén por el lema del Chef Gusteau: “cualquiera puede cocinar”. Pero, me doy cuenta, recién ahora comprendo sus palabras. No cualquiera puede convertirse en un gran artista, pero un gran artista sí puede provenir de cualquier lugar.
+<br/>
                         </p>
                     </div>
                     : true}

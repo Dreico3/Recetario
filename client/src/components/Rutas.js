@@ -7,7 +7,8 @@ export default function Rutas() {
         <div className='mid'>
             <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/'>Home </NavLink>
             <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/recipes'> Recetas </NavLink>
-            <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/registro'> Registro</NavLink>
+            <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/form'> Registro</NavLink>
+            <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/search'>Busquedas</NavLink>
         </div>
     )
 }

@@ -7,6 +7,9 @@ import {Route,Routes} from 'react-router-dom'
 import Home from './containers/Home'
 import NavBar from './containers/NavBar'
 import Recipes from './containers/Recipes'
+import Form from "./containers/Form";
+import Busquedas from "./containers/Busquedas";
+import InfoCard from "./containers/InfoCard";
 function App() {
   
   const dispatch=useDispatch();
@@ -19,6 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/recipes" element={<Recipes/>}/>
+        <Route path="/form" element={<Form/>}/>
+        <Route path="/search" element={<Busquedas/>}/>
+        <Route path="/recipes/:id" element={<InfoCard/>}/>
+        
       </Routes>
     </div>
   );

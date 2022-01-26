@@ -1,0 +1,43 @@
+.pasos{
+    text-align: center;
+}
+
+.pasos textarea{
+    display: flexbox;
+    width: 600px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.input{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+.input label{
+    display: flexbox;
+}
+
+.input input{
+    margin: 20px;
+}
+
+.diets{
+    text-align: center;
+}
+.activo{
+    background: rgb(31, 232, 31);
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 0 3px rgba(0,0,0,.5);
+    transition: 1s;
+    margin: 15px;
+}
+.inactivo{
+    border: 2px solid;
+    border-radius: 15px;
+    background: cornsilk;
+    width: 95%;
+    transition: 1s;
+    margin: 5px;
+}
