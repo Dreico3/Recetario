@@ -1,10 +1,17 @@
 import React from "react";
+import { getPasos } from "../controller";
 
 export default function RecetaCompleta({ receta }) {
-    console.log("esto es los paso?'")
-    console.log(receta.analyzedInstructions);
-    console.log("arriva de ti");
 
+    let ida = receta.id.toString();
+    let pasos = [];
+    if (receta.analyzedInstructions.length !== 0) {
+        if (ida.length < 10) {
+            pasos = getPasos(receta.analyzedInstructions[0].steps)
+        } else {
+            pasos = receta.analyzedInstructions;
+        }
+    }
     return (
         <div>
             <div>
@@ -13,19 +20,26 @@ export default function RecetaCompleta({ receta }) {
                     alt="creo q no tenemos imagen de la receta"
                 />
             </div>
+
             <div>
                 resumen
-                <p>
-                    {receta.summary}
+                <p dangerouslySetInnerHTML={{ __html: receta.summary }}>
                 </p>
             </div>
+
             <div>
-                {receta.analyzedInstructions!==undefined? receta.analyzedInstructions.map((p,i)=>{
-                    return(
-                        <p key={i}>{p}</p>
+                <h1>Pasos</h1>
+                {pasos.length !== 0 ? pasos.map((p, i) => {
+                    return (
+                        <div key={i}>
+                            paso {i+1}
+                            <p dangerouslySetInnerHTML={{ __html: p }} >
+
+                            </p>
+                        </div>
                     )
 
-                }):<h4>no tiene pasos</h4>}
+                }) : <h4>no tiene pasos</h4>}
             </div>
         </div>
     )

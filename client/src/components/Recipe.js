@@ -1,8 +1,9 @@
 import React from "react";
 import './css/recipe.css'
 import { Link } from "react-router-dom";
+import { getDiets } from "../controller";
 export default function Recipe({ receta }) {
-
+    var dietas = getDiets(receta);
     return (
         <div className="containe">
             <Link to={`/recipes/${receta.id}`} style={{ textDecoration: 'none', color: 'black' }}>
@@ -20,14 +21,12 @@ export default function Recipe({ receta }) {
 
                     </div>
                     <div className="descriptio">
-                        <p dangerouslySetInnerHTML={{ __html: receta.summary }}>
-
-                        </p>
-
+                        {/* <p dangerouslySetInnerHTML={{ __html: receta.summary }}></p> */}
                         <div className="diet">
-                            {/* <a href=" #" className="fab fa-facebock">logo</a>
-                            <a href=" #" className="fab fa-instagram">logo</a>
-                            <a href=" #" className="fab fa-facebock-f">logo</a> */}
+                            <h5>tipos de dieta</h5>
+                            {
+                                dietas.map((d,i)=><p key={i}>{d}</p>)
+                            }
                         </div>
                     </div>
 

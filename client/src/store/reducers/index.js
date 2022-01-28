@@ -2,7 +2,8 @@ const initialState = {
     //esto se armara mas tarde que temprano :D
     recipes:[],
     busquedas:null,
-    dietas:[]
+    dietas:[],
+    order:null
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -22,6 +23,18 @@ const rootReducer = (state = initialState, action) => {
             return{
                 ...state,
                 dietas:action.payload
+            }
+        case 'ORDER_ZA':
+            return{
+                ...state,
+                recipes:action.payload,
+                order:action.order
+            }
+        case 'ORDER_AZ':
+            return{
+                ...state,
+                recipes:action.payload,
+                order:action.order
             }
         default:
             return state;

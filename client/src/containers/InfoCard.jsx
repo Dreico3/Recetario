@@ -9,7 +9,6 @@ export default function InfoCard() {
     var receta = busquedaId(recetas, id)
     return (
         <div>
-            hola aqui tiene q estar la InfoCard o no? y tiene la id {id} verdad??
             <RecetaCompleta receta={receta}/>
         </div>
     )

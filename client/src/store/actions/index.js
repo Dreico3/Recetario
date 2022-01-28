@@ -33,3 +33,27 @@ export function Diets() {
         })
     }
 }
+
+export function ordenarZA(estado){
+    function SortArray(x, y){
+        return y.title.localeCompare(x.title);
+    }
+    var s = estado.sort(SortArray);
+    return {
+        type: 'ORDER_ZA',
+        payload: s,
+        order: true
+    }
+}
+
+export function ordenarAZ(estado){
+    function SortArray(x, y){
+        return x.title.localeCompare(y.title);
+    }
+    var s = estado.sort(SortArray);
+    return {
+        type: 'ORDER_AZ',
+        payload: s,
+        order: false
+    }
+}

@@ -49,8 +49,11 @@
 .descriptio .diet{
     margin-top: 25px;
 }
-.descriptio .diet a{
+.descriptio .diet p{
     display: inline-block;
-    padding: 0 15px;
+    padding: 0 3px;
     color:#f0522a;
+    background-color: rgb(221, 215, 204);
+    border: solid 1px;
+    border-radius: 15px;
 }
