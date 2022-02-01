@@ -6,9 +6,9 @@ export default function Recipe({ receta }) {
     var dietas = getDiets(receta);
     return (
         <div className="containe">
-            <Link to={`/recipes/${receta.id}`} style={{ textDecoration: 'none', color: 'black' }}>
 
-                <div className="card-containe">
+            <div className="card-containe">
+                <Link to={`/recipes/${receta.id}`} style={{ textDecoration: 'none', color: 'black' }}>
                     <div className="heade">
                         <p>
                             <img
@@ -20,18 +20,18 @@ export default function Recipe({ receta }) {
                         <h1>{receta.title}</h1>
 
                     </div>
-                    <div className="descriptio">
-                        {/* <p dangerouslySetInnerHTML={{ __html: receta.summary }}></p> */}
-                        <div className="diet">
-                            <h5>tipos de dieta</h5>
-                            {
-                                dietas.map((d,i)=><p key={i}>{d}</p>)
-                            }
-                        </div>
+                </Link>
+                <div className="descriptio">
+                    {/* <p dangerouslySetInnerHTML={{ __html: receta.summary }}></p> */}
+                    <div className="diet">
+                        <h5>tipos de dieta</h5>
+                        {
+                            dietas.map((d, i) => <p key={i}>{d}</p>)
+                        }
                     </div>
-
                 </div>
-            </Link>
+
+            </div>
         </div>
     )
 }

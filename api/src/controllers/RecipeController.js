@@ -4,12 +4,13 @@ require('dotenv').config();
 const {
     API_KEY
   } = process.env;
+const numeroRecetas=5;
 const getAllRecipes=async(req,res)=>{
     try {
         const {name} = req.query;
         var api=[];
         try {
-            api =await axios.get(`https://api.spoonacular.com/recipes/complexSearch?number=4&addRecipeInformation=true&apiKey=${API_KEY}`)
+            api =await axios.get(`https://api.spoonacular.com/recipes/complexSearch?number=${numeroRecetas}&addRecipeInformation=true&apiKey=${API_KEY}`)
             api=api.data.results;
         } catch (error) {
             console.log('error al traer infromacion de la base de datos externa');
