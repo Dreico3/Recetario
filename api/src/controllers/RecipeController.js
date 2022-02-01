@@ -96,11 +96,24 @@ const postAddRecipe =async(req,res)=>{
         //console.log(receta)
         res.send(receta);
     } catch (error) {
-        res.send('error al crear la receta')
+        res.status(404).send('error al crear la receta')
     }
+}
+const getMyRecipes =async (req,res)=>{
+    const myApi=await Recipe.findAll({
+        include:[{
+            model:Diet,
+            attributes:['nombre','descripcion'],
+            through:{
+                attributes:[]
+            }
+        }]
+    })
+    res.json(myApi);
 }
 module.exports={
     getAllRecipes,
     postAddRecipe,
-    getIdRecipe
+    getIdRecipe,
+    getMyRecipes
 }

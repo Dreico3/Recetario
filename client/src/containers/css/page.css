@@ -1,3 +1,10 @@
 .page{
-    background-color: coral;
+    background-color: rgb(49, 19, 19);
+}
+.orden{
+    text-align: center;
+}
+.orden button{
+    margin: 5px 10px;
+    
 }

@@ -8,7 +8,11 @@
     height: 250px;
     margin-top: 10px;
 }
-
+.formulario{
+    color: wheat;
+    background-color: rgb(55, 15, 8);
+    text-align: center;
+}
 .input{
     text-align: center;
     align-content: center;
@@ -26,18 +30,57 @@
     text-align: center;
 }
 .activo{
-    background: rgb(31, 232, 31);
-    border: 2px solid;
+    display: flex;
+    background: rgb(32, 16, 10);
+    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 0 0 3px rgba(0,0,0,.5);
     transition: 1s;
     margin: 15px;
 }
 .inactivo{
-    border: 2px solid;
-    border-radius: 15px;
-    background: cornsilk;
+   
+    background: rgb(53, 13, 0);
     width: 95%;
     transition: 1s;
     margin: 5px;
 }
+.inactivo input{
+    color:wheat;
+    background-color:  rgb(32, 16, 10);
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+.activo input{
+    color:wheat;
+    background-color:red;
+    border-radius: 5px;
+    width: auto;
+    margin: 15px;
+    border: solid 1px black;
+}
+
+.boton {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: #f50505;
+    border: 2px solid;
+    border-color: #530404;
+    position: relative;
+  }
+  .boton:before {
+    content:"";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(247, 238, 238, 0.1);
+    transition: all 1s ease;
+  }
+  .boton:hover:before {
+  width: 100%;
+  }

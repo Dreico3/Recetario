@@ -1,0 +1,46 @@
+.imagen{
+    display: flex;
+    align-items: center;
+    background-color: rgb(55, 15, 8);
+    color:wheat;
+}
+.imagen img{
+    height: 300px;
+    margin: 40px;
+    border: solid 1px;
+    border-radius: 30%;
+    box-shadow: 0 0 0 5px rgba(0,0,0,.2);
+}
+.imagen p{
+    margin: 10px;
+    padding: 10px;
+}
+.imagen h4{
+    margin-top: 20px;
+    align-content: center;
+}
+
+.paso{
+    background:url("../../img/madera.jpg") no-repeat bottom;
+    text-align: center;
+    color: wheat;
+}
+.paso div{
+    background:rgb(29, 23, 17);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin: 50px;
+    border:solid 1px black;
+    padding: 15px;
+}
+.paso p{
+    text-align: justify;
+}
+
+.no-encontrado{
+    width: 500px;
+    height: 600px;
+    background:url("../../img/Fruta2.png") no-repeat bottom;
+    display:block;
+    margin:auto;
+    
+}

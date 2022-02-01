@@ -36,6 +36,12 @@ const rootReducer = (state = initialState, action) => {
                 recipes:action.payload,
                 order:action.order
             }
+        case 'ORDER_PUN':
+            return{
+                ...state,
+                recipes:action.payload,
+                order:action.order
+            }
         default:
             return state;
     }

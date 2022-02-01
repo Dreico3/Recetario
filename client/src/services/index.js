@@ -43,6 +43,7 @@ export async function getDiets(){
 }
 export async function getRecipes(){
     return await axios.get('http://localhost:3001/recipes');
+    //return await axios.get('http://localhost:3001/recipes/recetas');
 }
 export async function getRecipesName(name){
     return await axios.get(`http://localhost:3001/recipes?name=${name}`);

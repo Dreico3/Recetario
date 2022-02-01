@@ -1,4 +1,6 @@
-import { getDiets,getRecipes,getRecipesName } from '../../services';
+import { getDiets, getRecipes, getRecipesName } from '../../services';
+import { getRecipesWhitDiet } from '../../controller';
+
 export function Optener() {
     return async (dispatch) => {
 
@@ -22,6 +24,14 @@ export function Buscar(nombre) {
         })
     }
 }
+export function BuscarDietas(nombre, lista) {
+
+
+    return {
+        type: 'SEARCH',
+        payload: getRecipesWhitDiet(nombre, lista)
+    }
+}
 
 export function Diets() {
     return async (dispatch) => {
@@ -34,8 +44,8 @@ export function Diets() {
     }
 }
 
-export function ordenarZA(estado){
-    function SortArray(x, y){
+export function ordenarZA(estado) {
+    function SortArray(x, y) {
         return y.title.localeCompare(x.title);
     }
     var s = estado.sort(SortArray);
@@ -46,13 +56,30 @@ export function ordenarZA(estado){
     }
 }
 
-export function ordenarAZ(estado){
-    function SortArray(x, y){
+export function ordenarAZ(estado) {
+    function SortArray(x, y) {
         return x.title.localeCompare(y.title);
     }
     var s = estado.sort(SortArray);
     return {
         type: 'ORDER_AZ',
+        payload: s,
+        order: false
+    }
+}
+export function ordenarPuntuacionA(estado) {
+    var s = estado.sort((a, b) => a.healthScore - b.healthScore);
+    return {
+        type: 'ORDER_PUN',
+        payload: s,
+        order: true
+    }
+}
+export function ordenarPuntuacionD(estado) {
+    var s = estado.sort((a, b) => b.healthScore - a.healthScore);
+
+    return {
+        type: 'ORDER_PUN',
         payload: s,
         order: false
     }

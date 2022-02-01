@@ -8,7 +8,7 @@ export default function InfoCard() {
     var recetas = useSelector(state => state.recipes);
     var receta = busquedaId(recetas, id)
     return (
-        <div>
+        <div >
             <RecetaCompleta receta={receta}/>
         </div>
     )
