@@ -36,7 +36,7 @@ export default function SearchBar() {
                     <input type="radio" id="dewey" name="drone" value="Diteas"
                      onChange={e=>setRes(e.target.value)}
                      />
-                        <label htmlFor="dewey">Diteas</label>
+                        <label htmlFor="dewey">Dietas</label>
                 </div>
 
 

@@ -25,8 +25,8 @@ export default function Page({ num, recetas }) {
             <div className="orden">
                 <button onClick={e => dispatch(ordenarAZ(recetas))}>oredernar A-Z</button>
                 <button onClick={e => dispatch(ordenarZA(recetas))} >oredernar Z-A</button>
-                <button onClick={e=>dispatch(ordenarPuntuacionD(recipes))}>ordenar por puntuacion decendente</button>
-                <button onClick={e=>dispatch(ordenarPuntuacionA(recipes))}>ordenar por puntuacion acendente</button>
+                <button onClick={e=>dispatch(ordenarPuntuacionD(recetas))}>ordenar por puntuacion decendente</button>
+                <button onClick={e=>dispatch(ordenarPuntuacionA(recetas))}>ordenar por puntuacion acendente</button>
             </div>
             {recipes.map(r => <Recipe receta={r} key={r.id} />)}
         </div>

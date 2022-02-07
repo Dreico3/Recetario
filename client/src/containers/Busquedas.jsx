@@ -4,7 +4,7 @@ import Recipe from "../components/Recipe";
 import './css/busqueda.css';
 export default function Busquedas() {
     const busqueda = useSelector(state => state.busquedas);
-
+    
     return (
         <div>
             <div className="page">

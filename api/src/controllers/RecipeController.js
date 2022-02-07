@@ -4,7 +4,7 @@ require('dotenv').config();
 const {
     API_KEY
   } = process.env;
-const numeroRecetas=5;
+const numeroRecetas=10;
 const getAllRecipes=async(req,res)=>{
     try {
         const {name} = req.query;
