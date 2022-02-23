@@ -11,7 +11,7 @@ const router = Router();
 // Ejemplo: router.use('/auth', authRouter);
 
 router.get('/', (req,res)=>{
-    res.send('error al cargar las dietas')
+    res.send('mushu.. : Estoy vivo......!!!!!')
 })
 router.use('/types',DietRouter);
 router.use('/recipes',RecipeRouter);
