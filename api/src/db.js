@@ -8,7 +8,7 @@ const {
 
 //importante para hacer el deployment a la base de datos
 
-let sequelize = process.env.NODE_ENV ==='produccion'
+let sequelize = process.env.NODE_ENV ==='production'
     ? new Sequelize({
       database:DB_NAME,
       dialect: "postgres",
