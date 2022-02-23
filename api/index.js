@@ -25,7 +25,7 @@ const {Diet} = require('./src/db')
 conn.sync({ alter: true }).then(() => {
   server.listen(process.env.PORT, async () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
-    /* const dieta1 = await Diet.create({
+    const dieta1 = await Diet.create({
       nombre: 'Sin gluten',
       descripcion: 'Eliminar el gluten significa evitar el trigo, la cebada, el centeno y otros cereales que contienen gluten y los alimentos elaborados con ellos (o que pueden haber sido contaminados de forma cruzada).'
     })
@@ -74,6 +74,6 @@ conn.sync({ alter: true }).then(() => {
     .then(res=>{
       console.log('dietas precargadas')
     })
-    .catch(err=>console.log('hay un error al cargar las dietas')) */
+    .catch(err=>console.log('hay un error al cargar las dietas'))
   });
 });
