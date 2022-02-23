@@ -23,7 +23,7 @@ export function postRes(receta){
 
     axios({
         method: 'POST',
-        url: 'http://localhost:3001/recipes/create',
+        url: '/recipes/create',
         data: {
             sourceName: receta.sourceName,
             title: receta.title,
@@ -39,16 +39,16 @@ export function postRes(receta){
 
 }
 export async function getDiets(){
-    return await axios.get('http://localhost:3001/types');
+    return await axios.get('/types');
 }
 export async function getRecipes(){
-    return await axios.get('http://localhost:3001/recipes');
+    return await axios.get('/recipes');
     //return await axios.get('http://localhost:3001/recipes/recetas');
 }
 export async function getRecipesName(name){
-    return await axios.get(`http://localhost:3001/recipes?name=${name}`);
+    return await axios.get(`/recipes?name=${name}`);
 }
 
 export async function getRecipeId(id){
-    return await axios.get(`http://localhost:3001/recipes/${id}`);
+    return await axios.get(`http://192.168.0.16:3001/recipes/${id}`);
 }
