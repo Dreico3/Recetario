@@ -1,13 +1,26 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
-import './css/rutas.css'
+import { NavLink, Link } from 'react-router-dom';
+import { Nav } from "react-bootstrap";
+import style from './css/rutas.module.css'
 export default function Rutas() {
 
     return (
-        <div className='mid'>
-            <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/recipes'> Recetas </NavLink>
-            <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/search'>Busquedas</NavLink>
-            <NavLink className={(data) => data.isActive ? 'active' : 'desactive'} to='/form'> Registro</NavLink>
-        </div>
+        <Nav className="me-auto">
+            <Nav.Link>
+                <Link to='/recipes' className={style.ruta}>
+                    Recetas
+                </Link>
+            </Nav.Link>
+            <Nav.Link>
+                <Link to='/search' className={style.ruta}>
+                    Busquedas
+                </Link>
+            </Nav.Link>
+            <Nav.Link>
+                <Link to='/form' className={style.ruta}>
+                    Registro
+                </Link>
+            </Nav.Link>
+        </Nav>
     )
 }

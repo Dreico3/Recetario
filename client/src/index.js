@@ -7,6 +7,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './store'
 import axios from 'axios';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import dotenv from 'dotenv'
 axios.defaults.baseURL= process.env.REACT_APP_NOMBREDELAAP ||"http://192.168.0.16:3001";
 ReactDOM.render(

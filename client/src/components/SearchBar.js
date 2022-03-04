@@ -4,7 +4,7 @@ import { Buscar } from '../store/actions';
 import { useNavigate } from "react-router-dom";
 import { BuscarDietas } from '../store/actions';
 
-import './css/searchBar.css'
+import style from './css/searchBar.module.css'
 export default function SearchBar() {
     let histori = useNavigate();
     const recetas = useSelector(state => state.recipes);
@@ -15,34 +15,27 @@ export default function SearchBar() {
         <form className='busqueda'
             onSubmit={e => {
                 e.preventDefault()
-                if(res==='Diteas'){
-                    dispatch(BuscarDietas(nom,recetas ))
-                }else{
+                if (res === 'Diteas') {
+                    dispatch(BuscarDietas(nom, recetas))
+                } else {
 
                     dispatch(Buscar(nom))
                 }
                 histori('/search');
             }}>
-
-            <div style={{color:'white'}}>
-
-
+            <div style={{ color: 'white' }}>
                 <div>
-                <p>Buscar por:</p>
+                    <span>Buscar por :</span>
                     <input defaultChecked type="radio" id="huey" name="drone" value="Nombre"
-                    onChange={e=>setRes(e.target.value)}
-                        />
-                        <label htmlFor="huey">Nombre</label>
+                        onChange={e => setRes(e.target.value)}
+                    />
+                    <label htmlFor="huey">Nombre</label>
                     <input type="radio" id="dewey" name="drone" value="Diteas"
-                     onChange={e=>setRes(e.target.value)}
-                     />
-                        <label htmlFor="dewey">Dietas</label>
+                        onChange={e => setRes(e.target.value)}
+                    />
+                    <label htmlFor="dewey">Dietas</label>
                 </div>
-
-
-    
             </div>
-
             <input type="text"
                 name="receta"
                 placeholder="receta..."
@@ -53,6 +46,7 @@ export default function SearchBar() {
             />
             <input type="submit"
                 value="buscar"
+                className={style.boton}
             />
         </form>
     )
