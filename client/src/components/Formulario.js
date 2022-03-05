@@ -106,7 +106,7 @@ export default function Formulario() {
                 </label>
                 <br />
                 <label>
-                    {!urlregex.test(inputs.image) ? <p style={{ color: "red", 'font-size': "13px" }}> !!...la imagen tiene q ser una URL</p> : true}
+                    {!urlregex.test(inputs.image) ? <p> !!...la imagen tiene q ser una URL</p> : true}
                     url de la imagen:
                     <input
                         type='text'
@@ -119,7 +119,7 @@ export default function Formulario() {
                 <br />
                 <label>
                     puntuacion de salud:
-                    {error ? <p style={{ color: "red", 'font-size': "13px" }}> !!... la puntuacion no puede ser negativa o mayor a 100</p> : true}
+                    {error ? <p> !!... la puntuacion no puede ser negativa o mayor a 100</p> : true}
                     <input
                         type='number'
                         name="healthScore"

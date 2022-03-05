@@ -10,10 +10,15 @@ export default function NavBar() {
     return (
         <div className="caja">
 
-            <Navbar bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand='lg' bg="dark" variant="dark" >
                 <Container>
                     <Logo />
-                    <Rutas />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse>
+                        <Nav>
+                            <Rutas />
+                        </Nav>
+                    </Navbar.Collapse>
                     <SearchBar />
                 </Container>
             </Navbar>

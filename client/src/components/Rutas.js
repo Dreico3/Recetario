@@ -6,21 +6,16 @@ export default function Rutas() {
 
     return (
         <Nav className="me-auto">
-            <Nav.Link>
+            
                 <Link to='/recipes' className={style.ruta}>
                     Recetas
                 </Link>
-            </Nav.Link>
-            <Nav.Link>
                 <Link to='/search' className={style.ruta}>
                     Busquedas
                 </Link>
-            </Nav.Link>
-            <Nav.Link>
                 <Link to='/form' className={style.ruta}>
                     Registro
                 </Link>
-            </Nav.Link>
         </Nav>
     )
 }

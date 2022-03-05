@@ -1,5 +1,19 @@
 .botones {
-    background-color: rgb(70, 47, 27);
+    background-color:  #c5cdd5;
     text-align: center;
 
+}
+
+.botones input{
+    background-color: #212529;
+    color:#c5cdd5;
+    border-radius: 8px;
+    padding: 0 8px;
+}
+
+.botones input:hover{
+    background-color: #c5cdd5;
+    color:#212529;
+    border-radius: 8px;
+    padding: 0 8px;
 }
