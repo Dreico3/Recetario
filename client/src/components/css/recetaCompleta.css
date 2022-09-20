@@ -1,12 +1,14 @@
 .recetaCompleta{
+    padding-top: 0.1px;
     margin-top:85px;
     height:100vh;
-    background-color: aqua;
 }
 .imagen{
+    padding-top: 40px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
-    background-color: rgb(55, 15, 8);
+    background-color: #370f08;
     color:wheat;
 }
 .imagen img{
@@ -26,10 +28,15 @@
 }
 
 .paso{
-    background:url("../../img/madera.jpg") no-repeat bottom;
+    background:url("../../img/madera.jpg")repeat;
     text-align: center;
     color: wheat;
-    height:100%;
+    min-height:50vh;
+    height:auto;
+}
+.paso h1{
+    padding-top: 0.1px;
+    color:rgb(0, 0, 0);
 }
 .paso div{
     background:rgb(29, 23, 17);

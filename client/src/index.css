@@ -2,4 +2,8 @@
 *{
   font-family: 'Inter', sans-serif;
   margin: 0%;
+  box-sizing: border-box;
+}
+html{
+  background-color: #747474;
 }
