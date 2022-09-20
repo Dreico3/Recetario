@@ -10,7 +10,7 @@ import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import dotenv from 'dotenv'
-axios.defaults.baseURL= process.env.REACT_APP_NOMBREDELAAP ||"http://192.168.0.16:3001";
+axios.defaults.baseURL= process.env.REACT_APP_NOMBREDELAAP ||"http://localhost:3001/";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

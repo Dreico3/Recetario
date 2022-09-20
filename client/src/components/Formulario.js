@@ -143,6 +143,7 @@ export default function Formulario() {
                             }
                         }) */
                         < textarea
+                            className="formulario-pasos"
                             key={i}
                             name={i}
                             placeholder="Paso 30: este paso es el ultimo?"

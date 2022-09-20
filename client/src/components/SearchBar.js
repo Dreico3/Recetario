@@ -4,7 +4,7 @@ import { Buscar } from '../store/actions';
 import { useNavigate } from "react-router-dom";
 import { BuscarDietas } from '../store/actions';
 
-import style from './css/searchBar.module.css'
+import './css/searchBar.css'
 export default function SearchBar() {
     let histori = useNavigate();
     const recetas = useSelector(state => state.recipes);
@@ -12,7 +12,7 @@ export default function SearchBar() {
     const [nom, setNom] = React.useState('');
     const dispatch = useDispatch();
     return (
-        <form className='busqueda'
+        <form className='searchbar'
             onSubmit={e => {
                 e.preventDefault()
                 if (res === 'Diteas') {
@@ -23,8 +23,8 @@ export default function SearchBar() {
                 }
                 histori('/search');
             }}>
-            <div style={{ color: 'white' }}>
-                <div>
+            <div>
+                <div className="searchbar-radio">
                     <span>Buscar por :</span>
                     <input defaultChecked type="radio" id="huey" name="drone" value="Nombre"
                         onChange={e => setRes(e.target.value)}
@@ -37,6 +37,7 @@ export default function SearchBar() {
                 </div>
             </div>
             <input type="text"
+            className="searchbar-input"
                 name="receta"
                 placeholder="receta..."
                 autoComplete='off'
@@ -46,7 +47,7 @@ export default function SearchBar() {
             />
             <input type="submit"
                 value="buscar"
-                className={style.boton}
+                className="searchbar-boton"
             />
         </form>
     )

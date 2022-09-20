@@ -1,3 +1,8 @@
+.recetaCompleta{
+    margin-top:85px;
+    height:100vh;
+    background-color: aqua;
+}
 .imagen{
     display: flex;
     align-items: center;
@@ -24,6 +29,7 @@
     background:url("../../img/madera.jpg") no-repeat bottom;
     text-align: center;
     color: wheat;
+    height:100%;
 }
 .paso div{
     background:rgb(29, 23, 17);

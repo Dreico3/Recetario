@@ -1,19 +1,27 @@
+.recipes{
+    margin-top: 85px;
+    padding-top: 20px;
+    background-color:#747474;
+    height:100vh;
+}
 .botones {
-    background-color:  #c5cdd5;
     text-align: center;
-
 }
 
 .botones input{
     background-color: #212529;
     color:#c5cdd5;
+    border:none;
     border-radius: 8px;
     padding: 0 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .botones input:hover{
-    background-color: #c5cdd5;
-    color:#212529;
+    background-color: #000000;
     border-radius: 8px;
     padding: 0 8px;
 }

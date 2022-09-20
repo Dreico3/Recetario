@@ -7,7 +7,7 @@ export default function Busquedas() {
     
     return (
         <div>
-            <div className="page">
+            <div className="busqueda">
 
                 {busqueda !== null ?
                     busqueda.map(b => (

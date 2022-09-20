@@ -10,6 +10,7 @@ import Recipes from './containers/Recipes'
 import Form from "./containers/Form";
 import Busquedas from "./containers/Busquedas";
 import InfoCard from "./containers/InfoCard";
+import "./App.css"
 function App() {
   
   const dispatch=useDispatch();
@@ -17,7 +18,7 @@ function App() {
     dispatch(Optener())
   },[])
   return (
-    <div>
+    <div className="app">
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>

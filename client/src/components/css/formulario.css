@@ -1,60 +1,75 @@
-.pasos{
+.formulario {
+    margin-top: 85px;
+    padding-top: 20px;
+    color: #ffffff;
+    background-color: #747474;
+    text-align: center;
+}
+.pasos {
     text-align: center;
 }
 
-.pasos textarea{
-    display: flexbox;
-    width: 600px;
-    height: 250px;
-    margin-top: 10px;
-}
-.formulario{
-    color: wheat;
-    background-color: rgb(55, 15, 8);
-    text-align: center;
-}
-.input{
+.input {
     text-align: center;
     align-content: center;
     align-items: center;
 }
-.input label{
+.input label {
     display: flexbox;
 }
 
-.input input{
+.input input {
     margin: 20px;
 }
 
-.diets{
+.diets {
     text-align: center;
 }
-.activo{
+.formulario-pasos {
+    display: block;
+    margin: 0 auto;
+    width: 40em;
+    height: 15em;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.activo {
     display: flex;
     background: rgb(32, 16, 10);
     border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 0 0 0 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
     transition: 1s;
     margin: 15px;
 }
-.inactivo{
-   
-    background: rgb(53, 13, 0);
+.inactivo {
     width: 95%;
     transition: 1s;
     margin: 5px;
 }
-.inactivo input{
-    color:wheat;
-    background-color:  rgb(32, 16, 10);
-    border-radius: 5px;
+.inactivo input {
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 15px;
     width: 150px;
     height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
-.activo input{
-    color:wheat;
-    background-color:red;
+.inactivo input:hover {
+    background-color: #1f1f1f;
+}
+.activo input {
+    color: wheat;
+    background-color: red;
     border-radius: 5px;
     width: auto;
     margin: 15px;
@@ -62,25 +77,30 @@
 }
 
 .boton {
-    color: #fff !important;
+    color: #fff;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: bold;
     padding: 0.5em 1.2em;
-    background: #f50505;
-    border: 2px solid;
-    border-color: #530404;
+    background: #000000;
+    border: none;
     position: relative;
-  }
-  .boton:before {
-    content:"";
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.boton:before {
+    content: "";
     position: absolute;
     top: 0px;
     left: 0px;
     width: 0px;
     height: 100%;
-    background: rgba(247, 238, 238, 0.1);
+    background: rgba(43, 255, 0, 0.459);
     transition: all 1s ease;
-  }
-  .boton:hover:before {
-  width: 100%;
-  }
+    border-radius: 15px;
+}
+.boton:hover:before {
+    width: 100%;
+}

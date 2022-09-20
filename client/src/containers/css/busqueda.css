@@ -1,14 +1,14 @@
-.no-encontrado{
+.busqueda {
+    margin-top: 85px;
+    padding-top: 50px;
+    background-color: #747474;
+    text-align: center;
+    height: 100vh;
+}
+.no-encontrado {
     width: 500px;
     height: 600px;
-    background:url("../../img/Fruta2.png") no-repeat bottom;
-    display:block;
-margin:auto;
-    
-}
-.fondo{
-  /*   background:url("../../img/madera.jpg") no-repeat bottom; */
-  background-color: #370F08;
-  height: 660px;
-    color: wheat;
+    background: url("../../img/Fruta2.png") no-repeat bottom;
+    display: block;
+    margin: auto;
 }

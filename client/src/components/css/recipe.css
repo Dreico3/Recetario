@@ -2,7 +2,7 @@
     display: inline-table;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     padding: 0 20px;
 }
 .card-containe{
